@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- uso <link para indicar por parametro la pestaña de estilos que va a utilizar-->
+    <!-- selecciones una fuente de estilos para el tipo de letra-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="../css/principal.css">
+    
+    <title>Proyecto laboratorio</title>
+</head>
+<body>
+
+    
+    <div class="navegador">
+        <nav class="nav-principal contenedor">
+            <!--<a> etiquetas de enlace para el menu -->
+            <a href="principal.html">Inicio</a>
+            <a href="sobreMi.html">Sobre mi</a>
+            <a href="proyecto.html">Proyectos</a>
+            <a href="principal.html">Contactos</a>
+        </nav>
+    </div>
+
+
+    <!--con <section> separo y determino esta parte de la pagina-->
+    <section class="portada">
+        <!-- separo y agrupo con div todo lo referido a la portada--> 
+        <div class="contenido-portada">
+            <!--<h2> meto el titulo secundario -->
+            <h2 class="titulo">Desarrollo web y de aplicaciones android</h1>
+            <!-- <p> texto con mi ubicacion--> 
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <circle cx="12" cy="11" r="3" />
+                <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+            </svg>
+            
+            <p>Cipolletti, Rio Negro</p>
+
+            <!--<a> etiqueta para llenar formulario de contacto-->
+        
+                <a class="boton" href="contacto.html">Contactar</a>
+        </div>
+    </section>
+
+    <!-- <main> le asigno mi contenido principal -->
+    <main class="contenedor sombra">
+        <!-- titulo principal de esta seccion-->
+        <h2> SERVICIOS </h2>
+        <!-- agrupo las secciones de los servicios que doy-->
+        <div class="servicios">
+            <!--con <section> separo y determino esta parte de la pagina-->
+            <section class="servicio-interno">
+                <!-- <h3> enuncia los tipos de servicios que ofresco-->
+                <h3>DESARROLLO WEB</h3>
+                <!-- agrupo los iconos y le asigno una clase-->
+                <div class="iconos">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-browser" width="56" height="56" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <rect x="4" y="4" width="16" height="16" rx="1" />
+                        <line x1="4" y1="8" x2="20" y2="8" />
+                        <line x1="8" y1="4" x2="8" y2="8" />
+                    </svg>
+                </div>
+                    <!-- aca utilizo un lista desordenada para agragar carecteristicas-->
+                    <ul>
+                        <li>Diseñar, programar, implementar y mantener aplicaciones Web Front-end y Back-End</li>
+                        <li>Sólidos conocimientos en HTML, CSS, JavaScript y extensiones de JS como jQuery u otros</li>
+                        <li>Capacidad de desarrollo de interfaces web responsivas para distintos tipos de pantallas</li>
+                        <li>Conocimientos de Seguridad Web. Técnicas de prevención de ataques por SQL Injection y XSS</li>
+                    </ul>
+            </section>
+            <!--con <section> separo y determino esta parte de la pagina-->
+            <section class="servicio-interno">
+                <!-- <h3> enuncia los tipos de servicios que ofresco-->
+                <h3>DESARROLLO DE APLICACIONES MÓVILES</h3>
+                <div class="iconos">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-android" width="56" height="56" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <line x1="4" y1="10" x2="4" y2="16" />
+                        <line x1="20" y1="10" x2="20" y2="16" />
+                        <path d="M7 9h10v8a1 1 0 0 1 -1 1h-8a1 1 0 0 1 -1 -1v-8a5 5 0 0 1 10 0" />
+                        <line x1="8" y1="3" x2="9" y2="5" />
+                        <line x1="16" y1="3" x2="15" y2="5" />
+                        <line x1="9" y1="18" x2="9" y2="21" />
+                        <line x1="15" y1="18" x2="15" y2="21" />
+                    </svg>
+                </div>
+                <!-- aca utilizo un lista desordenada para agragar carecteristicas-->
+                <ul>
+                    <li>Participar en la definición de la interfaz gráfica para móviles</li>
+                    <li>onocer sobre el desarrollo de apps móviles para las diferentes tecnologías nativas (ios, android, windows)</li>
+                    <li>Integración entre desarrollo mobile y desarrollo web. Comunicación un servidor web a través de API Rest.</li>
+                    <li>Trabajar junto a los desarrolladores web para crear y mantener un marco sólido para soportar las aplicaciones móviles y web</li>
+                    <li>Crear interfaces de usuario atractivas, específicas del dispositivo y experiencias</li>
+                </ul>
+    
+                
+            </section>
+
+        </div>
+
+    </main>
+    <section>
+    <h3>
+        <!--Pie de pagina-->
+    <footer class="pie-pag">
+        <p> Alumno: Agustin Mellado | profesor: Exequiel Wiederman | Instituto Tecnico Superior. </p>
+    </footer>
+        
+    </h3>
+
+</body>
+</html>

@@ -1,0 +1,220 @@
+/* aplicar un modelo de diseño de caja natural a todos los elementos, pero permitiendo que los componentes cambiene */
+html {
+    box-sizing: border-box;
+    }
+/*el primer anterisco se lo aplica a todos los elemento del html, es universal.
+- before y after son seudoelementos(no existen en hmtl solo en css) que el caso de usar 
+un box-sizing para que no le afecte aplicarle un padding 
+en caso que modifique su tamanio*/
+/* -----------------------PARTE GENERAL--------------------------------*/
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    /*tamanio fuente del body gral*/
+    font-size: 16px;
+    
+    /*color de fondo en degradado */
+    /*le digo de donde a donde quiero el degradado y la convinacion de colores */
+    background-image: linear-gradient(to top, white 0%, black 100%) ;
+
+}
+/*sombra para la parte principal de la pag*/
+.sombra{
+    box-shadow: 1px 2px 32px -3px rgba(18,18,18,0.75);
+    -webkit-box-shadow: 1px 2px 32px -3px rgba(18,18,18,0.75);
+    -moz-box-shadow: 1px 2px 32px -3px rgba(18,18,18,0.75);
+    background-color: rgb(212, 209, 209);
+    border-radius: 20px;
+
+}
+/*le doy tamanio y centro todo lo que este dentro de los h1,h2 y h3*/
+
+h1{
+    /*tamaño de texto*/
+    font-size: 40px;
+}
+h2{
+    font-size: 30px;
+}
+h3{
+    font-size: 20px;
+}
+h1,h2,h3{
+    text-align: center;
+}
+.contenedor{
+    /*le doy un ancho a toda la pagina */
+    max-width: 1200px;
+    /* utilizo margin para definir los margenes*/
+    margin: 0 auto;
+}
+/*-----------------------------------------------------------------------------------*/
+/**************************parte del titulo******************************/
+.titulo{
+    /* centro el titulo */
+    text-align: center;
+    /* le doy un tamaño al titulo*/
+    font-size:40px ; 
+    color: white;
+}
+/*---------------------------------------------------------------------*/
+/*************************Barra de navegacion********************/
+.navegador{
+    /*centro la barra de navegacion*/
+    text-align: center; 
+    /*le doy un color de fondo a esta parte*/
+    background-color:rgb(7, 1, 1);
+}
+/******************parte general de la pagina*************/
+
+
+/******************menu de la barra de navegacion**************/
+.nav-principal{
+    
+    /*distribuyo en bloques los enlaces del menu*/
+    display: flex;
+    /*le damos espacio entre ellos*/
+    justify-content: space-between;
+}
+/***enlaces de la barra de navegacion***/
+.nav-principal a{
+    /*espacio de relleno del borde hacia dentro*/
+    padding: 10px;
+    /*le doy color a los enlaces */
+    color: ghostwhite;
+    /* le quito la linea de enlace de debajo*/
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+/*para remarcar la parte del menu que se selecciona*/
+.nav-principal a:hover{
+    background-color: rgb(92, 94, 89);
+    /*para que al seleccinar se vea de otro color*/
+    color: black;
+}
+/*-------------------------------------fin menu---------------------------------------*/
+/*************************************Portada pagina**************************/
+.portada{
+    /*anchura del area*/
+    width: 100%;
+    /*Altura del area*/
+    height: 450px;
+    background-image: url(../img/arte-minimalista-geometrico.jpg);
+    /* para que no se repita*/
+    background-repeat: no-repeat;
+    /* para que abarque todo el espacio disponible*/
+    background-size: 200%;
+    /*animo la portada
+    indicando la velocidad, que se repita infinitamente
+    que su recorrido sea lineal y que al terminar rebote al centro*/
+    animation: movimiento 10s infinite linear alternate;
+    color: white;
+    /* declaro la posicion del contenedor padre como relativa */
+    position: relative;
+    /*para que se separe del contenido principal*/
+    margin-bottom: 20px;
+    
+}
+/***contenido de la portada***/
+.contenido-portada{
+    /* .portada padre de .contenido-portada, su posicion es absuluta para
+    que este se desplace dentro de tu padre */
+    position: absolute;
+    /*vamos agregar sombra a la portada*/
+    background-color: rgba(0, 0,0, .3);
+    width: 100%;
+    height: 100%;
+    /*centro el contenido*/
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+/*** para controlar el movimiento de la imagen, indicando hacia donde moverse y asi darle una animacion al fondo de la pagina***/
+@keyframes movimiento {
+    from{
+        background-position: bottom left;
+    }to{
+        background-position: right;
+    }
+
+    
+}
+/***le doy color al texto que esta dentro de la portada***/
+.contenido-portada a,
+.contenido-portada p{
+    color:white;
+    /*modifico su tamaño*/
+    font-size: 20px;
+}
+/***Disenio el boton dentro dento de la portada***/
+.boton{
+    /*le doy un color secundario*/
+    background-color: black;
+    /*color del texto*/
+    color: white;
+    /*lo centro*/
+    padding: 10px 30px;
+    /*separacion de la ubicacion*/
+    margin-top: 10px;
+    /*agrando la fuente*/
+    font-size: 20px;
+    /*le saco la linea del enlace*/
+    text-decoration: none;
+    /*lo coloco en mayuscula*/
+    text-transform: uppercase;
+    /*texto en negrita*/
+    font-weight: bold;
+    /*redondeo las esquinas*/
+    border-radius: 30px;
+    /*le doy un pequeño borde */
+    border: 2px solid rgb(255, 252, 252);
+
+}
+/***interactua con el usuario cuando este pasa el raton sobre el***/
+.boton:hover{
+    /*para que al seleccinar se vea de otro color*/
+    background-color: rgb(92, 94, 89);
+    color: black;
+}
+/*-----------------------fin portada--------------------------------------*/
+/****************************Parte principal de la pagina******************/
+.servicios{
+    margin-top: 30px;
+    /*distribuyo en bloques los enlaces del menu*/
+    display: flex;
+    /*le damos espacio entre ellos*/
+    justify-content: space-between;
+}
+/***parrafos***/
+.servicio-interno ul{
+    /*le doy distancia al interlineado del texto*/
+    line-height: 2;
+    /*coloco el texto en negrita*/
+    font-weight: bold;
+    
+}
+/***centrado del area de los servicios***/
+.servicio-interno{
+    /*alineo el contenido de mis servicios*/
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+/***ubico los iconos dentro de los servicios***/
+.servicio-interno .iconos{
+    height: 100px;
+    width: 100px;
+    background-color:black;
+    /*le doy bordes al fondo del icono*/
+    border-radius: 50%;    
+    /*alineo los iconos*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*--------------------------fin parte principal-----------------------------*/

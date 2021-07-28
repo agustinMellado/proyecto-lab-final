@@ -1,0 +1,126 @@
+/*aplicar un modelo de diseño de caja natural a todos los elementos, pero permitiendo que los componentes cambien */
+html {
+  
+    /* esto modifica el cuadro de borde en todos los elem*/
+    box-sizing: border-box;
+    }
+body{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/arte-minimalista-geometrico.jpg);
+    /* para que no se repita*/
+    background-repeat: no-repeat;
+    /* para que abarque todo el espacio disponible*/
+    background-size: 200%;
+    /*animo la portada
+    indicando la velocidad, que se repita infinitamente
+    que su recorrido sea lineal y que al terminar rebote al centro*/
+    animation: movimiento 10s infinite linear alternate;
+    color: white;
+}
+/* para controlar el movimiento de la imagen, indicando hacia donde moverse y asi darle una animacion al fondo de la pagina*/
+@keyframes movimiento {
+    /*indico de donde hacia donde debe moverse*/
+    from{
+        background-position: bottom left;
+    }to{
+        background-position: right;
+    }
+
+    
+}
+/*sombra para la parte principal de la pag*/
+.sombra{
+    box-shadow: 1px 2px 32px -3px rgba(18,18,18,0.75);
+    -webkit-box-shadow: 1px 2px 32px -3px rgba(18,18,18,0.75);
+    -moz-box-shadow: 1px 2px 32px -3px rgba(18,18,18,0.75);
+    background-color: rgb(212, 209, 209);
+    border-radius: 20px;
+
+}
+
+.from-register{
+    /*le doy un tamaño al formulario*/
+    width: 400px;
+    /*determino el espacio dentro
+    desde los bordes al centro     */
+    padding: 30px ;
+    /*determino la ubicacion del formulario*/
+    margin: 100px auto;
+    /*color del titulo del formulario*/
+    
+    
+}
+/**/
+.from-register h3{
+    /*establesco los tipos de visualización interna y externa de un elemento*/
+    /*con flex El elemento se comporta como un elemento de bloque y establece su contenido de acuerdo con el modelo de flexbox*/
+    display: flex;
+    /*defino cómo el navegador distribuye el espacio entre y alrededor de los items flex, centrandolos,*/
+    justify-content: center;
+    /*indico el alineamiento de un elemento dentro del bloque que lo contriene*/
+    align-items: center;
+    /*modifico el tamaño de texto*/
+    font-size: 30px;
+    /*modifico el espacio de la parte inferior*/
+    margin-bottom: 20px;
+    /* lo coloco en mayuscula */
+    text-transform: uppercase;
+    /*color de texto*/
+    color: black ;
+    }
+.campo{
+    /*centro los campos del formulario*/
+    display: flex;
+
+}
+.controls {
+    /*defino el ancho*/
+    width: 100%;
+    /*defino el color de fondo*/
+    background: #0c0d0e;
+    /*defino un ancho interno*/
+    padding: 10px;
+    /*redondeo los bordes*/
+    border-radius: 20px;
+    /*modifico el espacio de la parte inferior*/
+    margin-bottom: 16px;
+    /*le doy un borde los campos del formulario*/
+    border: 4px solid rgb(255, 252, 252);
+    /*tamanio y color de texto al escribir en  las celdas */
+    font-size: 18px;
+    color:white;
+}
+.boton{
+    /*le doy un color secundario*/
+    background-color: black;
+    /*color del texto*/
+    color: white;
+    /*lo centro*/
+    padding: 10px 30px;
+    /*separacion del campo y centrado*/
+
+    margin-left: 125px ;
+    /*agrando la fuente*/
+    font-size: 20px;
+    /*le saco la linea del enlace*/
+    text-decoration: none;
+    /*lo coloco en mayuscula*/
+    text-transform: uppercase;
+    /*texto en negrita*/
+    font-weight: bold;
+    /*redondeo las esquinas*/
+    border-radius: 30px;
+    /*le doy un borde pequeño*/
+    border: 2px solid rgb(255, 252, 252);
+}
+.boton:hover{
+    background-color: rgb(92, 94, 89);
+    /*para que al seleccinar se vea de otro color*/
+    color: black;
+    /*para que aparesca la mano sobre los cursores*/
+    cursor: pointer;
+}
+
+
+
